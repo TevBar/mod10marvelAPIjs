@@ -1,9 +1,9 @@
 const CryptoJS = require("crypto-js");
 
 function generateHash(publicKey, privateKey) {
-    const timestamp = new Date().getTime(); // Get current timestamp
-    const hash = CryptoJS.MD5(timestamp + privateKey + publicKey).toString(CryptoJS.enc.Hex);
-    return { timestamp, hash };
+  const timestamp = new Date().getTime(); // Get current timestamp
+  const hash = CryptoJS.MD5(timestamp + privateKey + publicKey).toString(CryptoJS.enc.Hex);
+  return { timestamp, hash };
 }
 
 // Replace with your actual keys

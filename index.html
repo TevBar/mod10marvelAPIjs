@@ -5,27 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Marvel App with Timer</title>
   <link rel="stylesheet" href="styles.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
 </head>
 <body>
   <nav>
     <ul>
-      <li>Home</li>
-      <li>Characters</li>
-      <li>About</li>
+      <li id="home-tab">Home</li>
+      <li id="characters-tab">Characters</li>
+      <li id="about-tab">About</li>
     </ul>
   </nav>
 
   <main>
-    <section id="marvel-section">
+    <!-- Home Section (Initially Visible) -->
+    <section id="home-section">
+      <h1>Welcome to the Marvel App</h1>
+      <p>Explore your favorite Marvel characters and learn more about them!</p>
+
+      <!-- Countdown Timer -->
+      <section id="timer-section">
+        <h1>Countdown Timer</h1>
+        <input type="number" id="timer-input" placeholder="Enter seconds">
+        <button id="start-timer">Start Timer</button>
+        <p id="timer-display">Timer: 0</p>
+      </section>
+    </section>
+
+    <!-- Marvel Characters Section (Initially Hidden) -->
+    <section id="marvel-section" style="display: none;">
       <h1>Marvel Characters</h1>
       <div id="charactersList"></div> 
     </section>
 
-    <section id="timer-section">
-      <h1>Countdown Timer</h1>
-      <input type="number" id="timer-input" placeholder="Enter seconds">
-      <button id="start-timer">Start Timer</button>
-      <p id="timer-display">Timer: 0</p>
+    <!-- About Section for Character Details (Initially Hidden) -->
+    <section id="about-section" style="display: none;">
+      <h1>About Character</h1>
+      <div id="characterDetails"></div>
     </section>
   </main>
 

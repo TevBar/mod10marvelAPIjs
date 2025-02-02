@@ -1,86 +1,132 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  nav {
-    background-color: #222;
-    color: #fff;
-    padding: 1rem 0;
-  }
-  
-  nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  nav ul li {
-    margin: 0 15px;
-    cursor: pointer;
-    transition: transform 0.3s ease, color 0.3s ease;
-  }
-  
-  nav ul li:hover {
-    color: #f00;
-    transform: scale(1.1);
-  }
-  
-  nav ul li:active {
-    color: #ff5722;
-    transform: scale(0.95);
-  }
-  
-  main {
-    padding: 20px;
-  }
-  
-  #characters {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-    margin-top: 20px;
-  }
-  
-  .character-card {
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 10px;
-    text-align: center;
-    background: #f9f9f9;
-  }
-  
-  .character-card:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  #timer-section {
-    margin-top: 30px;
-  }
-  
-  #timer-input {
-    padding: 10px;
-    margin-right: 10px;
-  }
-  
-  button {
-    padding: 10px 20px;
-    background: #222;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
-  
-  button:hover {
-    background: #444;
-  }
-  
-  button:active {
-    background: #666;
-  }
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 20px;
+}
+
+/* Navbar styling */
+nav {
+  background-color: #333;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Section styling */
+section {
+  display: none;
+}
+
+#home-section {
+  display: block;
+  text-align: center;
+}
+
+#marvel-section {
+  display: none;
+  padding: 20px 0;
+}
+
+.character-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  margin: 10px;
+  width: 100%;
+  max-width: 250px;
+}
+
+.character-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.character-card h3 {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Layout for character cards: CSS Grid */
+#charactersList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+/* About section styling */
+#about-section {
+  display: none;
+}
+
+#about-section h2 {
+  color: #ff6f61;
+  text-align: center;
+}
+
+#characterDetails {
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-top: 20px;
+}
+
+/* Timer section styling */
+#timer-section {
+  margin-top: 20px;
+  text-align: center;
+}
+
+input, button {
+  padding: 10px;
+  font-size: 1rem;
+  margin-top: 10px;
+  width: 100%;
+  max-width: 200px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #ff6f61;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+button:hover {
+  background-color: #e65c53;
+}
+
+/* General styling for timer display */
+#timer-display {
+  margin-top: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
